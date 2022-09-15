@@ -34,7 +34,7 @@
       </div>
     </div>
     <!-- 2022.09.15 카테고리 리스트 기능 추가 -->
-    <ul class="category-list">
+    <!-- <ul class="category-list">
       <li>
         <a href="https://joonrg.github.io/category/post.html">post</a>
       </li>
@@ -44,7 +44,13 @@
           <a href="https://joonrg.github.io/category/post2.html">post2</a>
         </ul>
       </li>
-    </ul>
+    </ul> --> 
+   
+    <div>
+      {% for category in page.categories % }
+        <a href="{{ site.url }}/category/{{ category }}.html" >{{ category }}</a>
+      {% endfor %}
+    </div>
     
     <!-- 2022.07.21 검색 기능 추가 -->
     <div id="search-demo-container" align="center">
